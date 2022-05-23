@@ -33,7 +33,7 @@ const Webshop = ({ webshop, categories }) => {
           </div>
           <div className="uk-section">
             <div className="uk-container uk-container-small">
-              <ReactMarkdown children={webshop.attributes.Sprecification} />
+              <ReactMarkdown>{webshop.attributes.Sprecification}</ReactMarkdown>
               <hr className="uk-divider-small" />
               <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
                 <div>
