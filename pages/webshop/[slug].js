@@ -24,7 +24,7 @@ const Webshop = ({ webshop, categories }) => {
         <div>
           <div
             id="banner"
-            className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
+            className="uk-flex uk-flex-center uk-background-cover uk-light"
             data-src={imageUrl}
             data-srcset={imageUrl}
             data-uk-img

@@ -65,3 +65,23 @@ a {
   .carousel .slider {
     height: 450px;
   }
+
+  .carousel .carousel-status {
+    display: none;
+  }
+
+  .carousel .slide img {
+    width: 20% !important;
+    height: 380px;
+  }
+
+  #banner {
+    background-size: auto;
+  }
+
+  .not-found>span {
+    /* width: 100vw;
+    height: 100vh;
+    margin-top: 70px; */
+    top: calc(100% - 50%) !important;
+  } 

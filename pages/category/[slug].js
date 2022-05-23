@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 import Articles from "../../components/articles";
+// import image from "../../assets/images";
 
 import { fetchAPI } from "../../lib/api";
 import Webshops from "../../components/webshops";
@@ -11,15 +13,21 @@ const Category = ({ category, categories }) => {
     metaDescription: `All ${category.attributes.name} articles`,
   };
 
-  // console.log("KATEGORIJE", category);
+  console.log("KATEGORIJE", category.attributes.webshops.data);
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h1>{category.attributes.name}</h1>
-          <Articles articles={category.attributes.articles.data} />
-          <Webshops webshops={category.attributes.webshops.data} />
+          {/* <Articles articles={category.attributes.articles.data} /> */}
+          { category.attributes.webshops.data.length !== 0 ?
+            (<Webshops webshops={category.attributes.webshops.data} />) 
+            :
+            (<div className='not-found'>
+              <Image src="/itemsNotFound.avif" alt="me" layout='fill' />
+            </div>)
+          }
         </div>
       </div>
     </Layout>

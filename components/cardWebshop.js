@@ -3,6 +3,7 @@ import Link from "next/link";
 import NextImage from "./image";
 
 const CardWebshop = ({ webshop }) => {
+  var res = webshop.attributes.MobileDescription.substring(0, 120);
   return (
     <Link href={`/webshop/${webshop.attributes.slug}`}>
       <a className="uk-link-reset">
@@ -16,6 +17,9 @@ const CardWebshop = ({ webshop }) => {
             </p>
             <p id="title" className="uk-text-large">
               {webshop.attributes.NameMobile}
+            </p>
+            <p id="mobile description" className="uk-text-medium">
+              {res}
             </p>
             {/* <p id="title" className="uk-text-large">
               {webshop.attributes.Model}
